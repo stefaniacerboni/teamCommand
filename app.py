@@ -11,10 +11,9 @@ def scrape_live_game(player_name="fragola"):
     url = f"https://lolpros.gg/player/{player_name}#live-game"
 
     options = Options()
-    options.add_argument("--headless")  # run in headless mode
-    options.add_argument("--no-sandbox")  # bypass OS security model
-    options.add_argument("--disable-dev-shm-usage")  # overcome limited resource problems
-    options.add_argument("--user-data-dir=/tmp/chrome")  # pick a unique temp dir
+    options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
 
     driver = webdriver.Chrome(options=options)
 
