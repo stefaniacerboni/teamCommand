@@ -18,9 +18,9 @@ RUN pip install -r requirements.txt
 COPY . /app
 WORKDIR /app
 
-# Expose the port (if running a web service)
-EXPOSE 5000
+# Expose the port
+EXPOSE 8080
 
 # Start command
-CMD gunicorn app:app --bind 0.0.0.0:$PORT --timeout 120
+CMD gunicorn app:app --bind 0.0.0.0:8080 --timeout 120
 
