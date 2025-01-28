@@ -21,5 +21,6 @@ WORKDIR /app
 # Expose the port (if running a web service)
 EXPOSE 5000
 
-# Start command (example using gunicorn + Flask app "app:app")
-CMD gunicorn app:app --bind 0.0.0.0:$PORT
+# Start command
+CMD gunicorn app:app --bind 0.0.0.0:$PORT --timeout 120
+
